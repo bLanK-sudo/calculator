@@ -1,0 +1,248 @@
+:root{
+    /*THEME1*/
+    /*BG*/
+    --main-blue:hsl(222, 26%, 31%);
+    --toggle-blue:hsl(223, 31%, 20%);
+    --screen-blue:hsl(224, 36%, 15%);
+    /*KEY*/
+    --key-bg-blue:hsl(225, 21%, 49%);
+    --key-shadow-blue:hsl(224, 28%, 35%);
+    --key-toggle-red:hsl(6, 63%, 50%);
+    --key-shadow-red:hsl(6, 70%, 34%);
+    --key-toggle-orange:hsl(30, 25%, 89%);
+    --key-shadow-orange:hsl(28, 16%, 65%);
+    /* TEXT */
+    --key-text-blue:hsl(221, 14%, 31%);
+
+    /*THEME2*/
+    /*BG*/
+    --main-gray:hsl(0, 0%, 90%);
+    --toggle-red:hsl(0, 5%, 81%);
+    --screen-gray:hsl(0, 0%, 93%);
+    /*KEY*/
+    --key-bg-cyan:hsl(185, 42%, 37%);
+    --key-shadow-cyan:hsl(224, 28%, 35%);
+    --key-toggle-orange-2:hsl(25, 98%, 40%);
+    --key-shadow-orange-2:hsl(25, 99%, 27%);
+    --key-toggle-yellow-2:hsl(45, 7%, 89%);
+    --key-shadow-d-orange-2:hsl(35, 11%, 61%);
+    /* TEXT */
+    --key-text-blue:hsl(60, 10%, 19%);
+
+    /*THEME3*/
+    /*BG*/
+    --main-violet:hsl(268, 75%, 9%);
+    --toggle-violet:hsl(268, 71%, 12%);
+    --screen-violet:hsl(268, 71%, 12%);
+    /*KEY*/
+    --key-bg-violet:hsl(281, 89%, 26%);
+    --key-shadow-l-magenta:hsl(285, 91%, 52%);
+    --key-toggle-cyan:hsl(176, 100%, 44%);
+    --key-shadow-cyan:hsl(177, 92%, 70%);
+    --key-toggle-violet:hsl(268, 47%, 21%);
+    --key-shadow-magenta:hsl(290, 70%, 36%);
+    /* TEXT */
+    --key-text-yellow:hsl(52, 100%, 62%);
+    --key-text-darkblue:hsl(198, 20%, 13%);
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    /**/
+    font-family: 'Spartan', sans-serif;
+    font-weight: 700;
+}
+.bdy1{
+    background: var(--main-blue);
+    color: white;
+}
+.bdy2{
+    background: var(--main-gray);
+    color: var(--key-text-blue);
+}
+.bdy3{
+    background: var(--main-violet);
+    color: var(--key-text-yellow);
+}
+.head{
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size:xx-large;
+    margin: 0;
+}
+.top{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.theme{
+    display: grid;
+    font-size: xx-small;
+    justify-self: flex-end;
+}
+p{
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 15px;
+}
+.keypad{
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+}
+.keypad1{
+    background: var(--main-blue);
+}
+.keypad2{
+    background: var(--main-gray);
+}
+.keypad3{
+    background:var(--main-violet);
+}
+.viewField{
+    grid-column: span 4;
+    border-radius: 9px;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 10px;
+    margin-left: 0;
+    margin-right: 0;
+}
+.keypad-bg1{
+    background: var(--screen-blue);
+}
+.keypad-bg2{
+    background-color: var(--screen-gray);
+}
+.keypad-bg3{
+    background-color: var(--screen-violet);
+}
+.keypad-pad{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 10px;
+    border-radius: 9px;
+}
+.keypad-pad-bg1{
+    background:var(--toggle-blue);
+}
+.keypad-pad-bg2{
+    background: var(--toggle-red);
+}
+.keypad-pad-bg3{
+    background-color: var(--toggle-violet);
+}
+.prevOperand{
+    font-size: 15px;
+    height: 25px;
+    justify-content: flex-start;
+}
+.currentOperand{
+    height: 40px;
+    font-size: 30px;
+    align-self: flex-end;
+}
+input[type="range"]{
+    align-self: flex-end;
+    justify-self: flex-end;
+    margin-right: 9px;
+    width: 60px;
+}
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 20px;
+    background: var(--toggle-blue);
+    outline: none;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius:50px 50px 50px 50px;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius:50%;
+    background: var(--key-toggle-red);
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #04AA6D;
+    cursor: pointer;
+  }
+input[type="button"]{
+    margin: 6px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+}
+.span-two{
+    grid-column: span 2;
+    width: 90%;
+}
+.btn{
+    border: none;
+    border-radius: 6px;
+    font-family: 'Spartan', sans-serif;
+    font-weight: 700;
+    background-color: var(--key-toggle-orange);
+    box-shadow: var(--key-shadow-orange) 0px 3px;
+}
+.btn1{
+    border: none;
+    border-radius: 6px;
+    font-family: 'Spartan', sans-serif;
+    font-weight: 700;
+    background-color:var(--key-toggle-yellow-2) ;
+    box-shadow: var(--key-shadow-d-orange-2) 0px 3px;
+}
+.btn2{
+    border: none;
+    border-radius: 6px;
+    font-family: 'Spartan', sans-serif;
+    font-weight: 700;
+    background-color:var(--key-toggle-violet) ;
+    box-shadow: var(--key-shadow-l-magenta) 0px 3px;
+}
+.btn-equal{
+    background-color: var(--key-toggle-red);
+    box-shadow: var(--key-shadow-red) 0 3px;
+}
+.btn-equal1{
+    background-color: var(--key-toggle-orange-2);
+    box-shadow: var(--key-shadow-orange-2) 0 3px;
+}
+.btn-equal2{
+    background-color: var(--key-toggle-cyan);
+    box-shadow: var(--key-shadow-cyan)0 3px;
+}
+.btn:active, .btn1:active, .btn2:active{
+    width: 83%;
+    height: 83%;
+    box-shadow:none;
+}
+.btn-del, .btn-reset{
+    background-color: var(--key-bg-blue);
+    box-shadow: var(--key-shadow-blue) 0 3px;
+}
+.btn-del1, .btn-reset1{
+    background-color: var(--key-bg-cyan);
+    box-shadow: var(--key-shadow-cyan) 0 3px;
+}
+.btn-del2, .btn-reset2{
+    background-color: var(--key-bg-violet);
+    box-shadow: var(--key-shadow-magenta) 0 3px;
+}
